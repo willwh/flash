@@ -700,6 +700,7 @@ package org.flowplayer.controller {
         protected function netStreamPlay(url:String):void {
             log.debug("netStreamPlay(): starting playback with resolved url " + url);
             _netStream.play(url);
+	    _netStream.receiveVideo(false);
         }
 
         protected function onClipUrlResolved(clip:Clip):void {
